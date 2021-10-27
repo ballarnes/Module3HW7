@@ -31,7 +31,7 @@ namespace Module3HW7
             }
         }
 
-        public static void FibonacciAsync()
+        public static void FibonacciManage()
         {
             CancellationTokenSource source = new CancellationTokenSource();
             CancellationToken token = source.Token;
@@ -54,7 +54,7 @@ namespace Module3HW7
 
         private static async Task Main(string[] args)
         {
-            Thread myThread = new Thread(new ThreadStart(FibonacciAsync));
+            Thread myThread = new Thread(new ThreadStart(FibonacciManage));
             myThread.Start();
             var taskList = new List<Task>();
             var tasks = new Tasks();
